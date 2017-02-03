@@ -26,9 +26,10 @@ def sub_sum_crappy(array)
       results << subs.dup
     end
   end
-  results.map { |arr| arr.inject(&:+) }.max
+  results.map do |arr|
+    arr.inject(&:+)
+  end.max
 end
-
 # def sub_sum(array)
 #   sum = nil
 #   array.each_with_index do |num, idx|
